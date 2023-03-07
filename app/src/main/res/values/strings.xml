@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">e-Tax</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="main_fragment_label">Main Fragment</string>
+</resources>
