@@ -27,5 +27,20 @@
         android:id="@+id/pbbRiwayatFragment"
         android:name="io.github.handharbeni.epbb.fragments.PbbRiwayatFragment"
         android:label="PbbRiwayatFragment"
-        tools:layout="@layout/fragment_pbb_riwayat"/>
+        tools:layout="@layout/fragment_pbb_riwayat">
+        <action
+            android:id="@+id/action_pbbRiwayatFragment_to_qrisFragment"
+            app:destination="@id/qrisFragment">
+            <argument
+                android:name="DataPbb"
+                app:argType="io.github.handharbeni.epbb.apis.responses.data.DataPbb"
+                android:defaultValue="@null"/>
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/qrisFragment"
+        android:name="io.github.handharbeni.epbb.fragments.QrisFragment"
+        android:label="QrisFragment"
+        tools:layout="@layout/fragment_qris"/>
+
 </navigation>

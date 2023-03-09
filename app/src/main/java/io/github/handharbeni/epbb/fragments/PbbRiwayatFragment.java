@@ -1,5 +1,7 @@
 package io.github.handharbeni.epbb.fragments;
 
+import static io.github.handharbeni.epbb.fragments.QrisFragment.KEY_PBB;
+
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +16,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import java.util.ArrayList;
 import java.util.List;
 
+import io.github.handharbeni.epbb.R;
 import io.github.handharbeni.epbb.adapters.PbbRiwayatAdapter;
 import io.github.handharbeni.epbb.apis.responses.data.DataPbb;
 import io.github.handharbeni.epbb.cores.BaseFragment;
@@ -21,8 +24,6 @@ import io.github.handharbeni.epbb.databinding.FragmentPbbRiwayatBinding;
 
 public class PbbRiwayatFragment extends BaseFragment implements PbbRiwayatAdapter.PbbAdapterCallback {
 	FragmentPbbRiwayatBinding binding;
-	NavController navController;
-
 	PbbRiwayatAdapter pbbRiwayatAdapter;
 	List<DataPbb> listData = new ArrayList<>();
 
@@ -49,6 +50,7 @@ public class PbbRiwayatFragment extends BaseFragment implements PbbRiwayatAdapte
 	}
 
 	void dummyData() {
+		listData = new ArrayList<>();
 		for (int i = 0; i < 3; i++) {
 			DataPbb dataPbb = new DataPbb();
 			dataPbb.setPbbYgHarusDibayarSppt("100000");
@@ -87,7 +89,9 @@ public class PbbRiwayatFragment extends BaseFragment implements PbbRiwayatAdapte
 
 	@Override
 	public void onQrisClick(DataPbb dataPbb) {
-
+		Bundle bundle = new Bundle();
+		bundle.putSerializable(KEY_PBB, dataPbb);
+		navigate(R.id.action_pbbRiwayatFragment_to_qrisFragment, bundle);
 	}
 
 	@Override

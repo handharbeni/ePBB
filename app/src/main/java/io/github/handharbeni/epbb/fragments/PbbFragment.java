@@ -16,7 +16,6 @@ import io.github.handharbeni.epbb.databinding.FragmentPbbBinding;
 
 public class PbbFragment extends BaseFragment {
 	FragmentPbbBinding binding;
-	NavController navController;
 
 	@Nullable
 	@Override
@@ -31,11 +30,11 @@ public class PbbFragment extends BaseFragment {
 	}
 
 	void initClick() {
-		binding.cvTitle.setOnClickListener(this::goToRiwayat);
-		binding.cvPajak.setOnClickListener(this::goToPelayanan);
-		binding.cvPbb.setOnClickListener(this::goToTrace);
-		binding.cvBphtb.setOnClickListener(this::goToPengurangan);
-		binding.cvRetribution.setOnClickListener(this::goToKeberatan);
+		binding.cvRiwayatPajak.setOnClickListener(this::goToRiwayat);
+		binding.cvPelayanan.setOnClickListener(this::goToPelayanan);
+		binding.cvTrace.setOnClickListener(this::goToTrace);
+		binding.cvPengurangan.setOnClickListener(this::goToPengurangan);
+		binding.cvKeberatan.setOnClickListener(this::goToKeberatan);
 	}
 
 	void goToRiwayat(View view) {

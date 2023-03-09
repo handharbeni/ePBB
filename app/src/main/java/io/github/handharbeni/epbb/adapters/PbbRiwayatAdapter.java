@@ -42,12 +42,8 @@ public class PbbRiwayatAdapter extends RecyclerView.Adapter<PbbRiwayatAdapter.Vi
 	public void onBindViewHolder(@NonNull PbbRiwayatAdapter.ViewHolder holder, int position) {
 		DataPbb dataPbb = listData.get(position);
 		holder.bindData(dataPbb);
-		holder.binding.btnQRIS.setOnClickListener(v -> {
-			pbbAdapterCallback.onQrisClick(dataPbb);
-		});
-		holder.binding.btnVA.setOnClickListener(v -> {
-			pbbAdapterCallback.onVaClick(dataPbb);
-		});
+		holder.binding.btnQRIS.setOnClickListener(v -> pbbAdapterCallback.onQrisClick(dataPbb));
+		holder.binding.btnVA.setOnClickListener(v -> pbbAdapterCallback.onVaClick(dataPbb));
 	}
 
 	@Override
