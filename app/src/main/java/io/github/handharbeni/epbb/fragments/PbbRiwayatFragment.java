@@ -56,18 +56,18 @@ public class PbbRiwayatFragment extends BaseFragment implements PbbRiwayatAdapte
 			dataPbb.setPbbYgHarusDibayarSppt("100000");
 			switch (i) {
 				case 0 :
-					dataPbb.setThnPajakSppt("2021");
-					dataPbb.setTglJatuhTempoSppt("2021");
+					dataPbb.setThnPajakSppt("2023");
+					dataPbb.setTglJatuhTempoSppt("2023");
 					dataPbb.setStatusPembayaranSppt("Belum Lunas");
 					break;
 				case 1 :
 					dataPbb.setThnPajakSppt("2022");
 					dataPbb.setTglJatuhTempoSppt("2022");
-					dataPbb.setStatusPembayaranSppt("Lunas");
+					dataPbb.setStatusPembayaranSppt("Belum Lunas");
 					break;
 				case 2 :
-					dataPbb.setThnPajakSppt("2023");
-					dataPbb.setTglJatuhTempoSppt("2023");
+					dataPbb.setThnPajakSppt("2021");
+					dataPbb.setTglJatuhTempoSppt("2021");
 					dataPbb.setStatusPembayaranSppt("Lunas");
 					break;
 			}
