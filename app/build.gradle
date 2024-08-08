@@ -83,4 +83,5 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.13.2'
 
     implementation 'com.github.vipulasri:timelineview:1.1.5'
+    implementation 'com.google.zxing:core:3.5.0'
 }
